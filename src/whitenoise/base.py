@@ -44,7 +44,7 @@ class WhiteNoise:
         mimetypes: dict[str, str] | None = None,
         add_headers_function: Callable[[Headers, str, str], None] | None = None,
         index_file: str | bool | None = None,
-        immutable_file_test: Callable | str | None = None,
+        immutable_file_test: Callable[[str, str], bool] | str | None = None,
     ):
         self.autorefresh = autorefresh
         self.max_age = max_age

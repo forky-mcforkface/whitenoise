@@ -142,7 +142,7 @@ class WhiteNoiseMiddleware(WhiteNoise):
             http_response[key] = value
         return http_response
 
-    def add_files_from_finders(self):
+    def add_files_from_finders(self) -> None:
         files = {}
         for finder in finders.get_finders():
             for path, storage in finder.list(None):
